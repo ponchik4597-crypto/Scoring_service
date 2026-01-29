@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    command: sh -c "uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+    #command: uv run uvicorn app.main:app --reload
+    depends_on:
+      - redis
+  redis:
+    image: redis:8.4.0
+    ports:
+      - "6379:6379"
+#docker compose build
+  #test:
+  #  build: .
+  #  command: pytest -v
+
+  #test-cov:
+  #  build: .
+  #  command: pytest --cov=app --cov-report=term-missing
+
+  #app:
+  #  build: .
+  #  command: uvicorn app.main:app --host 0.0.0.0 --reload
+  #  ports:
+  #    - "8000:8000"
