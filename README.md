@@ -12,3 +12,6 @@ uv pip install -r pyproject.toml
 
 #### Запустите контейнеры с помощью Docker Compose
 docker-compose up
+
+#### Чтобы быстро поднять Prometheus для сбора метрик
+docker run -d --name=prometheus -p 9090:9090 prom/prometheus
