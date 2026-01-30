@@ -1,6 +1,11 @@
-# source .venv/bin/activate
-# uv init --python 3.12 для uv
-# uv run option.py -n 'Олеся' -s 'Викторина'
-# Запуск uvicorn main:app --reload
-# docker-compose up
-# docker-compose build
+#### Для создания виртуального окружения выполните команду
+uv venv --python 3.12
+
+#### Для активации виртуального окружения
+source .venv/bin/activate
+
+#### Установите зависимости проекта, используя файл pyproject.toml
+uv pip install -r pyproject.toml
+
+#### Запустите контейнеры с помощью Docker Compose
+docker-compose up
