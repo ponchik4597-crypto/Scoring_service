@@ -1,7 +1,7 @@
+from datetime import date
 from typing import List
 
 from pydantic import BaseModel, Field
-from datetime import date
 
 
 class Loan(BaseModel):

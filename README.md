@@ -10,8 +10,6 @@ source .venv/bin/activate
 #### Установите зависимости проекта, используя файл pyproject.toml
 uv pip install -r pyproject.toml
 
-#### Запустите контейнеры с помощью Docker Compose
-docker-compose up
+#### Запуск сервера на порту 8000
+docker-compose up --build
 
-#### Чтобы быстро поднять Prometheus для сбора метрик
-docker run -d --name=prometheus -p 9090:9090 prom/prometheus
